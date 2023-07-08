@@ -1,14 +1,13 @@
 /* checkbox settings 👇 */
 
-
 .ui-checkbox {
-	--primary-color: #71C8FF;
+	--primary-color: #71c8ff;
 	--secondary-color: #fff;
-	--primary-hover-color: #71C8FF;
+	--primary-hover-color: #71c8ff;
 	/* checkbox */
 	--checkbox-diameter: 1.5rem;
 	--checkbox-border-radius: 6px;
-	--checkbox-border-color: #0B1423;
+	--checkbox-border-color: #fff;
 	--checkbox-border-width: 2.5px;
 	--checkbox-border-style: solid;
 	/* checkmark */
@@ -161,35 +160,35 @@
 	stroke: $primary-color;
 }
 
-#cbx:checked+.check svg {
+#cbx:checked + .check svg {
 	stroke: $primary-color;
 }
 
-#cbx:checked+.check svg path {
+#cbx:checked + .check svg path {
 	stroke-dashoffset: 60;
 	transition: all 0.3s linear;
 }
 
-#cbx:checked+.check svg polyline {
+#cbx:checked + .check svg polyline {
 	stroke-dashoffset: 42;
 	transition: all 0.2s linear;
 	transition-delay: 0.15s;
 }
 
-#cbx2:checked+.check svg {
+#cbx2:checked + .check svg {
 	stroke: $primary-color;
 }
 
-#cbx2:checked+.check svg {
+#cbx2:checked + .check svg {
 	stroke: $primary-color;
 }
 
-#cbx2:checked+.check svg path {
+#cbx2:checked + .check svg path {
 	stroke-dashoffset: 60;
 	transition: all 0.3s linear;
 }
 
-#cbx2:checked+.check svg polyline {
+#cbx2:checked + .check svg polyline {
 	stroke-dashoffset: 42;
 	transition: all 0.2s linear;
 	transition-delay: 0.15s;
@@ -198,7 +197,7 @@
 .accordion__item {
 	margin-bottom: 0.5rem;
 	border-radius: 0.25rem;
-	border-bottom: 2px solid #EDEDED;;
+	border-bottom: 2px solid #ededed;
 }
 
 .accordion__header {
@@ -206,7 +205,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 1rem;
-	color: #1A1D1F;
+	color: #1a1d1f;
 	font-weight: 700;
 	font-size: 20px;
 	border-top-left-radius: 0.25rem;
