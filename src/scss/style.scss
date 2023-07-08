@@ -580,5 +580,13 @@
 		font-style: normal;
 		font-weight: 600;
 		line-height: normal;
+
+		p {
+			&:first-child {
+				padding: 0;
+			}
+
+			padding: 1rem 0;
+		}
 	}
 }
