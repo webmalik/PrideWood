@@ -1,6 +1,16 @@
 import $ from "jquery";
-import Aos from "aos";
-import Siema from "siema";
+
+import Swiper from "swiper";
+import { Navigation } from 'swiper/modules';
+import { Fancybox } from "@fancyapps/ui";
+
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
+
 
 export function isWebp() {
 	function testWebP(callback) {
@@ -22,112 +32,76 @@ export function isWebp() {
 	});
 }
 
-export function burgerMenu() {
-	$('.header__burger').on("click", function (event) {
-		$('.header__burger, .header__menu').toggleClass('active');
-		$('body').toggleClass('lock');
-	});
+export function main() {
+	$('.product__button').on('click', (e) => {
+		let element = e.target
+		element.classList.toggle('active')
+	})
 }
 
-export function sticky() {
-	window.addEventListener('scroll', function () {
-		$('header').toggleClass('sticky', window.scrollY > 0);
-	});
-}
-
-export function pageNav() {
-	const headerLinks = $('.header__link');
-
-	headerLinks.each(function () {
-		$(this).on('click', function (event) {
-			event.preventDefault();
-
-			const targetId = $(this).attr('href');
-			const targetElement = $(`${targetId}:first`);
-			const targetOffset = targetElement.offset().top - 100;
-			$('html, body').animate({
-				scrollTop: targetOffset
-			}, 800);
-		});
-	});
-
-	function activateMenuItem() {
-		const scrollPosition = $(window).scrollTop();
-
-		headerLinks.each(function () {
-			const section = $(`${$(this).attr('href')}:first`);
-			if (
-				section.offset().top <= scrollPosition + 105 &&
-				section.offset().top + section.outerHeight() > scrollPosition + 105
-			) {
-				headerLinks.removeClass('active');
-				headerLinks.parent().removeClass('active');
-				$(this).addClass('active');
-				$(this).parent().addClass('active');
-			}
-		});
-	}
-
-	$(window).on('scroll', activateMenuItem);
-}
-
-export function aos_js() {
-	Aos.init();
-}
-
-export function slider() {
-	const slider = new Siema({
-		selector: '.slider',
+export function bannerSlide() {
+	const Banner = new Swiper('.swiper', {
+		modules: [Navigation],
+		slidesPerView: 1.3,
 		loop: true,
-		onChange: updatePagination,
-		duration: 1000,
-		perPage: 4,
-		easing: 'ease-out',
-	});
+		navigation: {
+			nextEl: '.banner__next > .banner__button',
+			prevEl: '.banner__prev > .banner__button',
+		},
+		centeredSlides: true,
+		spaceBetween: 150,
+	})
 
-	function updatePagination() {
-		const paginationItems = Array.from(document.querySelectorAll('.slider-pagination li'));
-		paginationItems.map((item, index) => {
-			if (index === slider.currentSlide) {
-				item.classList.add('active');
-			} else {
-				item.classList.remove('active');
-			}
-		});
-	}
-
-	function startAutoPlay(intervalTime) {
-		let autoPlayInterval = setInterval(function () {
-			slider.next();
-			updatePagination();
-		}, intervalTime);
-	}
-	updatePagination();
-	startAutoPlay(5000);
+	Banner.init()
 }
 
-export function tel() {
-	var input = document.getElementById("phone-ip");
+export function fancyMain() {
+	Fancybox.bind('[data-gallery="gallery"]', {
+		toolbar: "auto",
+		loop: true,
+		animationEffect: "zoom-in-out",
+		transitionEffect: "fade",
+		buttons: ["zoom", "slideShow", "fullScreen", "thumbs", "close"],
+		Thumbs: {
+			autoStart: true,
+			hideOnClose: true,
+		},
+		touch: {
+			vertical: false,
+		},
+	});
+}
 
-	input.onfocus = function (e) {
-		if (this.value === '') {
-			this.value += '+38 (';
-		}
-	};
+export function card() {
+	const card_open = $('#open_card')
+	const card_close = $('#close_card')
+	const card_window = $('.card')
+	const card_background = $('.card__background')
 
-	input.onkeyup = function (e) {
-		var len = this.value.length;
-		if (len === 8) {
-			this.value += ') ';
-		}
-		if (len === 9) {
-			this.value += ' ';
-		}
-		if (len === 12) {
-			this.value += '-';
-		}
-	}
-	if (len === 15) {
-		this.value += '-';
-	}
+	card_close.on('click', function (e) {
+		e.preventDefault()
+		card_window.css('right', '-41rem')
+		card_background.css('opacity', 0)
+		setTimeout(function () {
+			card_background.css('display', 'none')
+		}, 500)
+	})
+
+	card_open.on('click', function (e) {
+		e.preventDefault()
+		card_window.css('right', '0')
+		card_background.css('display', 'block')
+		setTimeout(function () {
+			card_background.css('opacity', 1)
+		}, 250)
+	})
+
+	card_background.on('click', function (e) {
+		e.preventDefault()
+		card_window.css('right', '-41rem')
+		card_background.css('opacity', 0)
+		setTimeout(function () {
+			card_background.css('display', 'none')
+		}, 500)
+	})
 }

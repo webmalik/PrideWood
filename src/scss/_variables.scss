@@ -2,41 +2,41 @@
 // Різні девайси
 
 $sizes: (
-	"xs":576px,
-	"sm":767px,
-	"md":992px,
-	"lg":1200px,
-	"xl":1400px
+	"xs": 576px,
+	"sm": 767px,
+	"md": 992px,
+	"lg": 1200px,
+	"xl": 1400px,
 );
 
-$xs:576px;
-$sm:767px;
-$md:992px;
-$lg:1200px;
-$xl:1400px;
-
+$xs: 576px;
+$sm: 767px;
+$md: 992px;
+$lg: 1200px;
+$xl: 1400px;
 
 // Типографіка
-$font-family: "Montserrat";
+$font-family: "Roboto", sans-sefir;
 $font-size: 16px;
 $line-height: 1.5;
 $color: #000000;
 
 // Кольори
-$main_color: #080707;
-$primary-color: #007bff;
-$secondary-color: #6c757d;
+$main_color: #272727;
+$primary-color: #71c8ff;
+$secondary-color: #2e190b;
 $white_color: #ffffff;
 $black_color: #000000;
 $silver_color: #151414;
-$border_silver_color: #B8B8B8;
+$border_silver_color: #b8b8b8;
 
 // Розміщення блоків
-$container-width: 1200px;
+$container-width: 1596px;
 $spacing-unit: 20px;
 $section-heading-spacing: $spacing-unit * 4;
-$maxWidth: 1920;
-$maxWidthContainer: 1200;
+$maxWidth: 1596px;
+$paddingContainer: 4rem;
+$maxWidthContainer: 1596px;
 
 // Сітка
 $grid-columns: 12;
@@ -47,11 +47,9 @@ $masonry-columns: 4;
 $form-border-radius: 4px;
 $button-border-radius: 4px;
 
-
 // Анімація
 $transition-duration: 0.2s;
 $hover-transition: all $transition-duration ease-in-out;
-
 
 $breakpoints: (
 	small: 320px,

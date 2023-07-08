@@ -39,11 +39,27 @@
 }
 
 %rectangle-button {
-	background-color: #EB1C23FF;
+	background-color: #eb1c23ff;
 	border-radius: 8px;
 	width: 260px;
 	height: 58px;
 	margin: 70px auto;
 	color: #fff;
 	font-weight: 500;
+}
+
+%scroll {
+	&::-webkit-scrollbar {
+		width: 0.3rem;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: $white_color;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $primary-color;
+		border-radius: 20px;
+		border: none;
+	}
 }
