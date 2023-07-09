@@ -55,56 +55,71 @@
 </header>
 		<main>
 	<div class="container">
-		<section class="content">
-			<div class="content__header">
-				<h1 class="content__title">
-					Доставка
-				</h1>
+		<section class="form">
+			<div class="form__title">
+				Форма оплати
 			</div>
-			<div class="content__main">
-				<p>
-					MAKEUP піклується про кожного з вас, пропонуючи різні способи оплати під час замовлення та в момент його
-					отримання.
-					Завдяки такому різноманіттю ви можете бути впевнені в безпечності онлайн-шопінгу. Обирайте найзручніший
-					спосіб оплати та
-					заощаджуйте свій час!
-				</p>
-				<p>
-					1. Готівкова оплата при отриманні замовлення
-					Якщо ви не бажаєте попередньо оплачувати замовлення, у вас є можливість розрахуватись з кур’єром в момент
-					отримання
-					посилки. Щоб процес був максимально комфортним і для вас, і для кур’єра, рекомендуємо заздалегідь
-					підготувати суму до
-					сплати.
-				</p>
-				<p>
-					2. Безготівкова оплата при оформленні замовлення
-					Власники карт Visa та MasterCard можуть повністю оплатити замовлення у момент його оформлення. Даний
-					варіант оплати
-					дозволить заощадити час при отриманні посилки. При зустрічі з кур'єром, менеджерами пункту самовивозу або
-					поштового
-					відділення вам необхідно буде просто забрати замовлення, попередньо надавши документ, що підтверджує
-					особу одержувача.
-				</p>
-				<p>
-					3. Оплата готівкою на пункті самовивозу
-					У Києві та Харкові працюють пункти самовивозу, які дозволяють забрати замовлення в найбільш зручному для
-					вас місці. При
-					оформленні замовлення вам потрібно вказати варіант доставки, вибравши один із запропонованих пунктів
-					самовивозу MAKEUP.
-					Зверніть увагу: на пунктах самовивозу можливий розрахунок лише готівкою. Щоб розрахуватися платіжною
-					карткою, вам
-					необхідно вибрати зручний спосіб оплати на етапі оформлення замовлення.
-				</p>
-				<p>
-					4. Оплата готівкою при отриманні на поштових відділеннях і пунктах видачі посилок
-					При отриманні посилки на відділеннях Нової Пошти, Укрпошти, Інтайм, Міст Експрес, Justin або Автолюкс ви
-					можете
-					розплатитися лише готівкою. Отже, ви сплачуєте виключно суму замовлення без прихованих платежів, комісій
-					та послуг
-					транспортних компаній.
-				</p>
-			</div>
+			<form action="#" class="form__payments">
+				<label for="sex">Ваша стать</label>
+				<div class="form__radio">
+					<input type="radio" name="sex">
+					<p>Жіноча</p>
+					<input type="radio" name="sex">
+					<p>Чоловіча</p>
+				</div>
+				<div class="form__flex">
+					<div class="form__input">
+						<label for="name">Ім'я</label>
+						<input type="text" required name="name" placeholder="Ім'я">
+					</div>
+					<div class="form__input">
+						<label for="surname">Прізвище</label>
+						<input type="text" required name="surname" placeholder="Прізвище">
+					</div>
+				</div>
+				<div class="form__flex">
+					<div class="form__input">
+						<label for="tel">Телефон</label>
+						<input type="tel" required name="tel" placeholder="+380">
+					</div>
+					<div class="form__select">
+						<label for="country">Ваша країна</label>
+						<select name="country" id="country">
+							<option value="Україна" selected>Україна</option>
+							<option value="Німеччина">Німеччина</option>
+							<option value="Польща">Польща</option>
+							<option value="Італія">Італія</option>
+						</select>
+					</div>
+				</div>
+				<div class="form__flex">
+					<div class="form__input">
+						<label for="city">Ваше місто</label>
+						<input type="text" required name="city" placeholder="Київ">
+					</div>
+					<div class="form__input">
+						<label for="street">Ваша вулиця</label>
+						<input type="text" required name="street" placeholder="Хрещатик">
+					</div>
+				</div>
+				<div class="form__flex">
+					<div class="form__input">
+						<label for="house">Номер будинку</label>
+						<input type="text" required name="house" placeholder="1">
+					</div>
+					<div class="form__input">
+						<label for="index">Індекс</label>
+						<input type="text" required name="index" placeholder="15000">
+					</div>
+				</div>
+				<div class="form__textaera">
+					<label for="comment">Коментар</label>
+					<textarea name="comment" id="comment" placeholder="Текст"></textarea>
+				</div>
+				<button class="form__button button">
+					Замовити
+				</button>
+			</form>
 		</section>
 	</div>
 </main>
@@ -154,6 +169,11 @@
 		<a href="politics.html">Політика конфіденційності</a>
 	</div>
 </footer>
+		<section class="modal">
+	<div class="modal__block">
+		Ваше замовлення було прийнято!
+	</div>
+</section>
 		<div class="card__background"></div>
 <section class="card">
 	<div class="card__header">

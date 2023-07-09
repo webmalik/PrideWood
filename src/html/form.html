@@ -1,0 +1,70 @@
+<main>
+	<div class="container">
+		<section class="form">
+			<div class="form__title">
+				Форма оплати
+			</div>
+			<form action="#" class="form__payments">
+				<label for="sex">Ваша стать</label>
+				<div class="form__radio">
+					<input type="radio" name="sex">
+					<p>Жіноча</p>
+					<input type="radio" name="sex">
+					<p>Чоловіча</p>
+				</div>
+				<div class="form__flex">
+					<div class="form__input">
+						<label for="name">Ім'я</label>
+						<input type="text" required name="name" placeholder="Ім'я">
+					</div>
+					<div class="form__input">
+						<label for="surname">Прізвище</label>
+						<input type="text" required name="surname" placeholder="Прізвище">
+					</div>
+				</div>
+				<div class="form__flex">
+					<div class="form__input">
+						<label for="tel">Телефон</label>
+						<input type="tel" required name="tel" placeholder="+380">
+					</div>
+					<div class="form__select">
+						<label for="country">Ваша країна</label>
+						<select name="country" id="country">
+							<option value="Україна" selected>Україна</option>
+							<option value="Німеччина">Німеччина</option>
+							<option value="Польща">Польща</option>
+							<option value="Італія">Італія</option>
+						</select>
+					</div>
+				</div>
+				<div class="form__flex">
+					<div class="form__input">
+						<label for="city">Ваше місто</label>
+						<input type="text" required name="city" placeholder="Київ">
+					</div>
+					<div class="form__input">
+						<label for="street">Ваша вулиця</label>
+						<input type="text" required name="street" placeholder="Хрещатик">
+					</div>
+				</div>
+				<div class="form__flex">
+					<div class="form__input">
+						<label for="house">Номер будинку</label>
+						<input type="text" required name="house" placeholder="1">
+					</div>
+					<div class="form__input">
+						<label for="index">Індекс</label>
+						<input type="text" required name="index" placeholder="15000">
+					</div>
+				</div>
+				<div class="form__textaera">
+					<label for="comment">Коментар</label>
+					<textarea name="comment" id="comment" placeholder="Текст"></textarea>
+				</div>
+				<button class="form__button button">
+					Замовити
+				</button>
+			</form>
+		</section>
+	</div>
+</main>

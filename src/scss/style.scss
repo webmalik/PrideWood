@@ -851,6 +851,8 @@
 	}
 
 	&__button {
+		display: flex;
+		justify-content: center;
 		background-color: $white_color;
 		color: #333;
 		border-radius: 0.6875rem;
@@ -984,6 +986,7 @@
 		}
 
 		&__button {
+			display: flex;
 			color: $white_color;
 			font-family: Roboto;
 			font-size: 1rem;
@@ -1021,5 +1024,158 @@
 			font-weight: 500;
 			line-height: normal;
 		}
+	}
+}
+
+//Form
+
+.form {
+	label {
+		font-size: 1.5rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 2.25rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		margin: 3.13rem 0 3.56rem;
+	}
+
+	&__payments {
+		max-width: 50%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		margin-bottom: 3.75rem;
+	}
+
+	&__radio {
+		display: flex;
+		align-items: center;
+		input {
+			margin-right: 0.5rem;
+		}
+		p {
+			margin-right: 2rem;
+		}
+	}
+
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	input {
+		border-radius: 0.3125rem;
+		border: 1.5px solid rgba(255, 255, 255, 0.5);
+		background: rgba(255, 255, 255, 0.05);
+		color: $white_color;
+		font-size: 1.125rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		padding: 0.94rem 1.25rem 1rem;
+
+		&::placeholder {
+			color: rgba(255, 255, 255, 0.85);
+		}
+	}
+
+	select {
+		border-radius: 0.3125rem;
+		border: 1.5px solid rgba(255, 255, 255, 0.5);
+		background: rgba(255, 255, 255, 0.05);
+		color: $white_color;
+		font-size: 1.125rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		padding: 0.94rem 1.25rem 1rem;
+		outline: none;
+	}
+
+	textarea {
+		border-radius: 0.3125rem;
+		border: 1.5px solid rgba(255, 255, 255, 0.5);
+		background: rgba(255, 255, 255, 0.05);
+		color: $white_color;
+		font-size: 1.125rem;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		padding: 0.94rem 1.25rem 1rem;
+	}
+
+	&__input {
+		display: flex;
+		flex-direction: column;
+		gap: 0.69rem;
+		min-width: 40%;
+	}
+
+	&__select {
+		display: flex;
+		flex-direction: column;
+		gap: 0.69rem;
+		min-width: 40%;
+	}
+
+	&__textaera {
+		display: flex;
+		flex-direction: column;
+		gap: 0.69rem;
+	}
+
+	&__button {
+		border-radius: 0.3125rem;
+		background: $primary-color;
+		border: 1px solid $primary-color;
+		color: rgba(255, 255, 255, 0.85);
+		font-family: Roboto;
+		font-size: 2rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		padding: 0.88rem 0 0.94rem;
+		margin: 1.87rem 0 0;
+	}
+}
+// Modal
+
+.modal {
+	position: fixed;
+	display: flex;
+	max-height: auto;
+	opacity: 0;
+	top: -100vh;
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.7);
+	transition: all 0.5s ease-in-out;
+
+	&.active {
+		opacity: 1;
+		top: 0;
+	}
+
+	&__block {
+		color: $black_color;
+		font-size: 2rem;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		padding: 3.94rem 11.25rem;
+		border-radius: 0.75rem;
+		background-image: url("@img/background_card.png");
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }

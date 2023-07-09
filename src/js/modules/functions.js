@@ -37,6 +37,17 @@ export function main() {
 		let element = e.target
 		element.classList.toggle('active')
 	})
+
+	// Тимчасово для показу
+	const modal = $('.modal')
+
+	$('.form__button').on('click', () => {
+		modal.toggleClass('active')
+	})
+
+	modal.on('click', () => {
+		modal.toggleClass('active')
+	})
 }
 
 export function bannerSlide() {

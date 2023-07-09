@@ -247,10 +247,15 @@ button {
   border: none;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url("../img/background_body.png");
   font-family: "Roboto", sans-serif;
+  color: #ffffff;
 }
 
 a {
@@ -1235,6 +1240,8 @@ main {
   padding: 0.29rem 0.81rem;
 }
 .item__button {
+  display: flex;
+  justify-content: center;
   background-color: #ffffff;
   color: #333;
   border-radius: 0.6875rem;
@@ -1322,6 +1329,7 @@ main {
   margin: 0 0 0 auto;
 }
 .item .additionally__button {
+  display: flex;
   color: #ffffff;
   font-family: Roboto;
   font-size: 1rem;
@@ -1355,4 +1363,138 @@ main {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+
+.form label {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.form__title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 3.13rem 0 3.56rem;
+}
+.form__payments {
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3.75rem;
+}
+.form__radio {
+  display: flex;
+  align-items: center;
+}
+.form__radio input {
+  margin-right: 0.5rem;
+}
+.form__radio p {
+  margin-right: 2rem;
+}
+.form__flex {
+  display: flex;
+  justify-content: space-between;
+}
+.form input {
+  border-radius: 0.3125rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0.94rem 1.25rem 1rem;
+}
+.form input::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+.form select {
+  border-radius: 0.3125rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0.94rem 1.25rem 1rem;
+  outline: none;
+}
+.form textarea {
+  border-radius: 0.3125rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0.94rem 1.25rem 1rem;
+}
+.form__input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.69rem;
+  min-width: 40%;
+}
+.form__select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.69rem;
+  min-width: 40%;
+}
+.form__textaera {
+  display: flex;
+  flex-direction: column;
+  gap: 0.69rem;
+}
+.form__button {
+  border-radius: 0.3125rem;
+  background: #71c8ff;
+  border: 1px solid #71c8ff;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Roboto;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 0.88rem 0 0.94rem;
+  margin: 1.87rem 0 0;
+}
+
+.modal {
+  position: fixed;
+  display: flex;
+  max-height: auto;
+  opacity: 0;
+  top: -100vh;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  transition: all 0.5s ease-in-out;
+}
+.modal.active {
+  opacity: 1;
+  top: 0;
+}
+.modal__block {
+  color: #000000;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding: 3.94rem 11.25rem;
+  border-radius: 0.75rem;
+  background-image: url("../img/background_card.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
