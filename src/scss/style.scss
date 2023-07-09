@@ -5,6 +5,7 @@
 @import "_tamplates";
 @import "_root";
 @import "_checkbox";
+@import "_burger-icon";
 
 // Header
 
@@ -63,7 +64,7 @@
 		align-items: center;
 		width: 4.56081rem;
 		height: 4.7635rem;
-		background: url("../img/lan_back.png");
+		background-image: url("../img/lan_back.png");
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: contain;
@@ -1179,3 +1180,11 @@
 		background-size: cover;
 	}
 }
+
+.mobile {
+	&__visible {
+		display: none;
+	}
+}
+
+@import "_media";

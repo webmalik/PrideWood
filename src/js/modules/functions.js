@@ -50,6 +50,18 @@ export function main() {
 	})
 }
 
+export function burgerMenu() {
+	const burger = $('.header__burger')
+	const burgerIcon = $('#nav-icon1')
+	const navBlock = $('.header__block')
+
+
+	burger.on('click', () => {
+		burgerIcon.toggleClass('open')
+		navBlock.toggleClass('active')
+	})
+}
+
 export function bannerSlide() {
 	const Banner = new Swiper('.swiper', {
 		modules: [Navigation],
@@ -61,6 +73,16 @@ export function bannerSlide() {
 		},
 		centeredSlides: true,
 		spaceBetween: 150,
+
+		breakpoints: {
+			100: {
+				slidesPerView: 1,
+				spaceBetween: 40,
+			},
+			992: {
+				slidesPerView: 1.3
+			}
+		}
 	})
 
 	Banner.init()
@@ -84,7 +106,7 @@ export function fancyMain() {
 }
 
 export function card() {
-	const card_open = $('#open_card')
+	const card_open = $('.open__card')
 	const card_close = $('#close_card')
 	const card_window = $('.card')
 	const card_background = $('.card__background')

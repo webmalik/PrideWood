@@ -1,11 +1,18 @@
 <header class="header">
 	<div class="container">
 		<div class="header__wrapper">
-			<div class="header__item">
+			<div class="header__item mobile__hidden">
 				<a href="catalog.html">Каталог</a>
 			</div>
 			<div class="header__logo">
 				<a href="/"><img src="@img/logo.svg" alt="PrideWood"></a>
+			</div>
+			<div class="header__burger mobile__visible">
+				<div id="nav-icon1">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
 			</div>
 			<div class="header__block">
 				<div class="header__lang">
@@ -27,8 +34,16 @@
 						<img src="@img/search.svg" alt="Search">
 					</a>
 				</div>
-				<div class="header__card">
-					<a href="#" id="open_card">
+				<nav class="header__menu mobile__visible">
+					<ul class="header__list">
+						<li class="header__item"><a href="catalog.html">КАТАЛОГ</a></li>
+						<li class="header__item"><a href="payments.html">ОПЛАТА</a></li>
+						<li class="header__item"><a href="delivery.html">ДОСТАВКА</a></li>
+						<li class="header__item"><a href="return.html">ПОВЕРНЕННЯ</a></li>
+					</ul>
+				</nav>
+				<div class="header__card mobile__hidden">
+					<a href="#" class="open__card">
 						<img src="@img/card.svg" alt="Card">
 					</a>
 				</div>
